@@ -19,7 +19,7 @@ Click the "add to cart" button beneath the item that you want to purchase. The I
 
 To remove an item from the cart simply click the Item in the cart area that you want to remove
 
-After you have selected and removed all items and are ready to checkout click the "checkout" button at the bottom. Your total with tax will be shown along with a "pay now" button.
+After you have selected and removed all items and are ready to checkout click the "checkout" button at the bottom. Your total with deliveryFee will be shown along with a "pay now" button.
 
 To pay simply click the "pay now" button
 
