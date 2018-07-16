@@ -25,4 +25,4 @@ To pay simply click the "pay now" button
 
 # Live Demo
 Click below to preview live demo
-- [Here ](https://amaechi-chuks.github.io/global-accelerex-interns-challenge/)
+- [Here ](https://amaechi-chuks.github.io/SUPERMART-EXPRESS-NIGERIA/)
