@@ -11,16 +11,16 @@ class Item {
 $(document).ready(function(){
 var cart = new Array();
 $('.button').click(function(){
-    var i = $(this).val();
-    switch (i) {
+    var itemList = $(this).val();
+    switch (itemList) {
         case "item1": 
-            add("arturia", 120)
+            add("bag", 120)
             break;
         case "item2": 
-            add("suzuki", 1000)
+            add("shoe", 1000)
             break;
         case "item3": 
-            add("hammond", 1800)
+            add("shirt", 1800)
             break;
     }
     subtotal();
@@ -29,8 +29,8 @@ $('.button').click(function(){
 
 function subtotal() {
     var total=0;
-    for (var i=0;i<cart.length;i++){
-        total+=(cart[i].price*cart[i].quantity);
+    for (var itemList=0;itemList<cart.length;itemList++) {
+        total+=(cart[itemList].price*cart[itemList].quantity);
     }
     $('#subtotal').text("$"+total);
     return total;
@@ -38,7 +38,7 @@ function subtotal() {
 
 function credit() {
     var withoutTax = subtotal();
-    var Tax = withoutTax*0.075;
+    var Tax = withoutTax*0.05;
     var total = withoutTax+Tax
     var text = "Your total is $"+total;
     $(".checkout").text(text);
@@ -48,10 +48,10 @@ function credit() {
 function add(name, price){
     var selected = false;
     if(cart[0] !== null){
-        for(var i=0;i<cart.length;i++){
-            if(cart[i].name === name){
+        for (var itemList=0;itemList<cart.length;itemList++) {
+            if(cart[itemList].name === name) {
                 selected = true;
-                cart[i].quantity+=1;
+                cart[itemList].quantity+=1;
                 break;
             }
         }
@@ -60,16 +60,16 @@ function add(name, price){
         cart.push(new Item(name, price))
     }
     	var newI = document.createElement("li");
-        newI.id = cart[i].name;
-        newI.innerHTML = (cart[i].name+" $"+cart[i].price+" "+cart[i].quantity)
+        newI.id = cart[itemList].name;
+        newI.innerHTML = (cart[itemList].name+" $"+cart[itemList].price+" "+cart[itemList].quantity)
         $('#itemList').append(newI);
 }
     
 $('#itemList').on('click', 'li', function(){
     var itemId = $(this).attr("id");
-    for(var i=0;i<cart.length;i++){
-        if(cart[i].name === itemId){
-            cart[i].quantity-=1;
+    for(var itemList=0;itemList<cart.length;itemList++){
+        if(cart[itemList].name === itemId){
+            cart[itemList].quantity-=1;
             break;
         }
     }

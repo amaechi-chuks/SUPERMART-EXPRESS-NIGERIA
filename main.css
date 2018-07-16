@@ -6,7 +6,10 @@
     padding: 0;
 }
 body{
-  background-image: url("https://images6.alphacoders.com/391/391336.jpg")
+  background-image: url(NT64HEb-_400x400.jpg);
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   
 }
 section,
@@ -28,6 +31,10 @@ img {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+}
+
+li {
+  list-style: none outside none;
 }
 
 /*still trying to figure out how to fix the item spacing-Enj*/
