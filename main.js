@@ -37,9 +37,9 @@ function subtotal() {
 };
 
 function credit() {
-    var withoutTax = subtotal();
-    var Tax = withoutTax*0.05;
-    var total = withoutTax+Tax
+    var withoutDeliveryFee = subtotal();
+    var DeliveryFee = withoutDeliveryFee*0.05;
+    var total = withoutDeliveryFee+DeliveryFee
     var text = "Your total is $"+total;
     $(".checkout").text(text);
     $("#pay").show();
